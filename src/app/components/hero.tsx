@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Hero = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
             </div>
             {/* Right */}
             <div>
-                <h1>right</h1>
+                <Image src={""}  alt='profile'></Image>
             </div>
         </div>
     )
