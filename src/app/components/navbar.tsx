@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { LuShoppingCart } from "react-icons/lu";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
-import { HiMenu } from "react-icons/hi";
 import { SheetSide } from '@/components/sheet';
 
 
