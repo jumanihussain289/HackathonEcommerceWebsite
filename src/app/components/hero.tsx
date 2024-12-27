@@ -17,7 +17,7 @@ const Hero = () => {
             {/* Right */}
             <div className='relative'>
                 {/* Profile Png */}
-                <Image src={"/images/header-homepage.png"} width={200} height={200} alt='profile' className='w-[600px] mt-[17px] sm:w-[504px]'></Image>
+                <Image src={"/images/header-homepage.png"} width={200} height={200} alt='profile' className='w-[600px] mt-[17px] sm:w-[500px]'></Image>
                 {/* Small-Star-Left Svg */}
                 <Image src={"/icons/small-star.svg"} width={200} height={200} alt='profile' className=' w-[40px] absolute top-[115px] left-4 md:w-[40px] md:top-[220px] md:-left-4'></Image>
                 {/* Big-Star-Right Svg */}
