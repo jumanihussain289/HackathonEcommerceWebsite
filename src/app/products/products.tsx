@@ -12,10 +12,11 @@ interface Iproduct {
     oldPrice: string;
 }
 
-let product = [
+const product:Iproduct[] = [
     {
         title: "T-SHIRT WITH TAPE DETAILS",
         id: 1,
+        oldPrice: "$150",
         price: "$120",
         img_url: "/images/pic1.png"
     },
@@ -29,6 +30,7 @@ let product = [
     {
         title: "CHECKERED SHIRT",
         id: 3,
+        oldPrice: "$150",
         price: "$120",
         img_url: "/images/pic3.png"
     },
@@ -41,7 +43,7 @@ let product = [
     },
 ];
 
-let star = [<FaStar />, <FaStar />, <FaStar />, <FaStar />, <FaStar />];
+const star = [<FaStar />, <FaStar />, <FaStar />, <FaStar />, <FaStar />];
 
 export default function New_Arrivals() {
     return (

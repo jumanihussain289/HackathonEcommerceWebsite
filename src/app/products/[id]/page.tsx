@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { useParams } from "next/navigation";
 import { FaStar } from "react-icons/fa";
-let star = [<FaStar />, <FaStar />, <FaStar />, <FaStar />, <FaStar />,]
+const star = [<FaStar />, <FaStar />, <FaStar />, <FaStar />, <FaStar />,]
 
 interface Iproduct {
     id: number;
@@ -22,13 +22,13 @@ interface Iproduct {
 
 }
 
-let product = [
+const product:Iproduct[] = [
     {
         title: "T-SHIRT WITH TAPE DETAILS",
         id: 1,
         price: "$120",
         des: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-        odlPrice: "200",
+        oldPrice: "200",
         img_url: "/images/pic1.png",
         img1: "/images/pic9.png",
         img2: "/images/pic10.png",
@@ -50,6 +50,7 @@ let product = [
         title: "CHECKERED SHIRT",
         id: 3,
         price: "$120",
+        oldPrice: "$150",
         des: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         img_url: "/images/pic3.png",
         img1: "/images/pic9.png",
