@@ -1,0 +1,97 @@
+1. Products
+
+Description: Items available for sale on the platform.
+
+    Fields:
+        ID (unique identifier)
+        Name
+        Description (brief about the product)
+        Price
+        Stock (available quantity)
+        Size (if applicable for clothing)
+        Color (if applicable)
+        Category (e.g., T-shirts, jeans, accessories, etc.)
+        Image (product image URL)
+        
+2. Customers
+
+Description: Users who register on the platform.
+
+    Fields:
+        ID (unique identifier)
+        Name
+        Email
+        Phone number
+        Address (billing and shipping addresses)
+        Cart (products added to the cart)
+
+3. Orders
+
+Description: Represents a customer's purchase, containing all order-related details.
+
+    Fields:
+        Order ID (unique identifier)
+        Customer ID (who made the order)
+        Product IDs (which products were bought)
+        Quantity (how many of each product)
+        Order Status (pending, shipped, delivered, etc.)
+        Order Date (timestamp)
+        Total Amount (total price of all products in the order)
+        Payment Status (paid, pending)
+
+4. Payments
+
+Description: Details about the payment for orders.
+
+    Fields:
+        Payment ID (unique identifier)
+        Order ID (linked to the order)
+        Payment Method (credit card, PayPal, etc.)
+        Amount (total payment)
+        Payment Date (timestamp)
+        Payment Status (successful, failed)
+
+5. Shipment/Delivery
+
+Description: Information about the shipping status of orders.
+
+    Fields:
+        Shipment ID (unique identifier)
+        Order ID (linked to the order)
+        Tracking Number (for shipment tracking)
+        Shipping Address (destination address)
+        Shipping Status (in progress, out for delivery, delivered)
+        Estimated Delivery Date
+
+
+7. Reviews
+
+Description: Feedback from customers about the products they purchased.
+
+    Fields:
+        Review ID (unique identifier)
+        Product ID (which product is being reviewed)
+        Customer ID (who wrote the review)
+        Rating (1-5 stars)
+        Comment (optional text)
+        Date of Review
+
+8. Cart 
+
+Description: Items that customers add to their cart before checking out.
+
+    Fields:
+        Cart ID (unique identifier)
+        Customer ID (who owns the cart)
+        Product IDs (products added to the cart)
+        Quantity (how many of each product)
+        Total Price (calculated based on the products and their quantities)
+
+Additional Considerations:
+
+    Discounts/Promotions: If you plan to have discounts or sales, we can add a Discounts entity.
+        Fields: Discount Code, Description, Percentage/Amount off, Start Date, End Date.
+
+
+
+

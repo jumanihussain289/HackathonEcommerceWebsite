@@ -1,0 +1,96 @@
++-------------------+       +-------------------+       +--------------------+
+|     Customers     |       |      Products     |       |    Orders          |
++-------------------+       +-------------------+       +--------------------+
+| - customerID      |<----->| - productID       |<----->| - orderID          |
+| - name            |       | - productName     |       | - customerID       |
+| - email           |       | - productPrice    |       | - productIDs       |
+| - password        |       | - productImages[] |       | - orderDate        |
+| - shippingAddress |       | - category        |       | - shippingAddress  |
+| - contactNumber   |       | - description     |       | - status           |
++-------------------+       | - stockQuantity   |       +--------------------+
+                            | - rating          |
+                            +-------------------+
+
++-------------------+       +-------------------+       +--------------------+
+|   Payments        |       |   Reviews         |       |   Shipping         |
++-------------------+       +-------------------+       +--------------------+
+| - paymentID       |<----->| - reviewID        |       | - shippingID       |
+| - orderID         |       | - customerID      |       | - orderID          |
+| - orderAmount     |       | - productID       |       | - shippingMethod   |
+| - paymentMethod   |       | - rating          |       | - shippingDate     |
+| - paymentStatus   |       | - comment         |       | - trackingNumber   |
++-------------------+       +-------------------+       +--------------------+
+
+
+Explanation:
+
+    Customers: Stores customer details like customerID, name, email, and their shippingAddress.
+    Products: Contains details about products such as productID, name, price, and an array of productImages[].
+    Orders: Links to the Customers entity through customerID and stores order-related information like orderDate and shippingAddress.
+    Payments: Associates with Orders and stores details about the payment method, status, and the amount.
+    Reviews: Tied to both Customers and Products, allowing customers to rate and leave comments on products.
+    Shipping: Associated with Orders and includes shipping-related information like shippingMethod and trackingNumber.
+    
+    
+    
+    +-------------------+                 +-------------------+                 
+|    Customers      |                 |     Products      |                 
++-------------------+                 +-------------------+                 
+| - customerID      |<--------------->| - productID       |<--------------+  
+| - name            |                 | - productName     |               |  
+| - email           |                 | - productPrice    |               |  
+| - password        |                 | - productImages[] |               |  
+| - shippingAddress |                 | - category        |               |  
+| - contactNumber   |                 | - description     |               |  
++-------------------+                 | - stockQuantity   |               |  
+                                      | - rating          |               |  
+                                      +-------------------+               |  
+                                             ^                            |  
+                                             |                            |  
+                    +--------------------+   |   +-------------------+   |  
+                    |      Orders        |---+---|      Reviews       |   |  
+                    +--------------------+       +-------------------+   |  
+                    | - orderID          |       | - reviewID        |   |  
+                    | - customerID       |       | - customerID      |   |  
+                    | - productIDs       |       | - productID       |   |  
+                    | - orderDate        |       | - rating          |   |  
+                    | - shippingAddress  |       | - comment         |   |  
+                    | - status           |       +-------------------+   |  
+                    +--------------------+                               |  
+                             |                                          |  
+                             |                                          |  
+                             v                                          |  
+                    +-------------------+                 +-------------+   
+                    |    Payments       |                 |   Shipping  |   
+                    +-------------------+                 +-------------+   
+                    | - paymentID       |                 | - shippingID|   
+                    | - orderID         |                 | - orderID   |   
+                    | - orderAmount     |                 | - method    |   
+                    | - paymentMethod   |                 | - date      |   
+                    | - paymentStatus   |                 | - tracking# |   
+                    +-------------------+                 +-------------+   
+                    
+                    
+                    
+                    erDiagram
+    CUSTOMERS ||--o{ ORDERS : places
+    CUSTOMERS ||--o{ CART : has
+    CUSTOMERS ||--o{ REVIEWS : writes
+    
+    PRODUCTS ||--o{ ORDER_ITEMS : contains
+    PRODUCTS ||--o{ CART : contains
+    PRODUCTS ||--o{ REVIEWS : receives
+    
+    ORDERS ||--|{ ORDER_ITEMS : includes
+    ORDERS ||--|| PAYMENTS : has
+    ORDERS ||--|| SHIPMENT : has
+
+    ORDER_ITEMS {
+        int order_id
+        int product_id
+        int quantity
+    }
+
+
+
+
