@@ -1,9 +1,9 @@
 # Shop.co Online Shopping Platform
 
 ## Author Information
-**Author:** Muzaffar Ali  
-**Slot:** Friday Morning 
-**Role Number:** 00481161  
+**Author:** Hussain Jumani  
+**Slot:** Friday Evening 
+**Role Number:** 00309571  
 
 ---
 
