@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 // Define the initial state using that type
-
 export const cartSlice = createSlice({
   name: 'products',
   // `createSlice` will infer the state type from the `initialState` argument
