@@ -1,0 +1,31 @@
+Metric,Desktop Value,Mobile Value,Potential Savings,Notes
+First Contentful Paint,0.7 s,2.3 s,,
+Total Blocking Time,280 ms,150 ms,,
+Speed Index,1.8 s,5.1 s,,
+Largest Contentful Paint,1.6 s,5.9 s,,
+Cumulative Layout Shift,0.004,0.004,,
+Avoid multiple page redirects,,,480 ms,
+Reduce unused JavaScript,,,208 KiB,
+Minimizes main-thread work,1.2 s,,,
+Avoid long main-thread tasks,,,,3 long tasks found
+JavaScript execution time,0.7 s,,,
+Avoids an excessive DOM size,,,,475 elements
+Initial server response time,230 ms,,,
+Avoid large layout shifts,,,,1 layout shift found
+Avoids enormous network payloads,,,,796 KiB
+Avoid chaining critical requests,,,,1 chain found
+Minimize third-party usage,,,,0 ms
+Performance Score,80,76,,
+Accessibility Score,92,,,
+Best Practices Score,96,,,
+SEO Score,108,,,
+Product Listing - Display,Passed,,,Products displayed correctly
+Product Listing - Details,Passed,,,"Images, titles, descriptions, and prices accurate"
+Filters - Search Functionality,Passed,,,Search returns correct products
+"Filters - Price, Category, Ratings",Passed,,,Filters return accurate results
+Cart - Add Items,Passed,,,Cart updates correctly
+Cart - Update Quantities,Passed,,,Quantity updates correctly
+Cart - Remove Items,Passed,,,Items removed successfully
+Cart - Total Price Calculation,Passed,,,Total price calculated correctly
+Dynamic Routing - Product Detail Page,Passed,,,Product detail page loads correctly
+Dynamic Routing - URL Change,Passed,,,URL updates dynamically
